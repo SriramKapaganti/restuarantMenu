@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 16px 32px;
+  background-color: #fff8f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cafe-heading {
+  font-size: 28px;
+  color: #222;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  position: relative;
+}
+
+.count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 14px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.tab-bar {
+  display: flex;
+  overflow-x: auto;
+  background-color: #f5f5f5;
+  padding: 12px 16px;
+  gap: 12px;
+}
+
+.tab-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e0e0e0;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tab-btn.active {
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tab-btn:hover {
+  background-color: #bbb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.items-container {
+  padding: 24px;
+}
+
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h1 {
+  margin: 0 0 8px;
+}
+
+.item-details p {
+  margin: 0;
+  color: #555;
+}
+
+.calories {
+  font-size: 12px;
+  color: orange;
+}
+
+.addon-text {
+  color: green;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.item-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-left: 20px;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.qty-controls button {
+  background-color: #eee;
+  border: none;
+  font-size: 16px;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 0 8px;
+}
+
+.qty-controls button:hover {
+  background-color: #ccc;
+}
+
+.qty-controls p {
+  font-size: 16px;
 }
